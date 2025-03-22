@@ -1,6 +1,6 @@
-# EL Workflow
+# ELT Workflow
 
-This project sets up an Extract & Load (EL) workflow using Docker and PostgreSQL. The workflow extracts data from a source PostgreSQL database and loads it into a destination PostgreSQL database. This is done without any transformations, simply moving data between the two databases.
+This project sets up an Extract & Load (ELT) workflow using Docker and PostgreSQL. The workflow extracts data from a source PostgreSQL database and loads it into a destination PostgreSQL database. This is done without any transformations, simply moving data between the two databases. After loading this data models and Jinja are created in dbt, elt script is orchestrated through airflow!
 
 ## How It Works:
 
@@ -19,5 +19,7 @@ This project sets up an Extract & Load (EL) workflow using Docker and PostgreSQL
 - The process is triggered automatically when the ```elt_script``` container starts and completes the data load once it has finished processing.
 
 - All services (source and destination databases, as well as the EL script) are connected to a Docker network (```elt_network```) for seamless communication.
+
+- ....
 
 Inspired from freeCodeCamp.org!
